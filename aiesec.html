@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIESEC 2025 - MR PKUNAKA</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="icon" type="image/png" href="zimflag.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #0f2027;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'JetBrains Mono', 'Orbitron', monospace;
+            overflow-x: hidden;
+        }
+        /* Neon animated grid */
+        .neon-grid-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.22;
+        }
+        /* Futuristic hero container */
+        .aiesec-hero-2025 {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 5rem 2rem 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 2.5rem;
+            background: rgba(30, 40, 60, 0.85);
+            box-shadow: 0 0 64px #00c3ff55, 0 0 0 16px #ffff1c22;
+            border: 8px solid transparent;
+            border-image: linear-gradient(90deg, #00c3ff, #ffff1c, #8b5cf6, #ec4899) 1;
+            animation: borderMorph 6s infinite alternate;
+            backdrop-filter: blur(12px);
+        }
+        @keyframes borderMorph {
+            0% { box-shadow: 0 0 64px #00c3ff55, 0 0 0 16px #ffff1c22;}
+            100% { box-shadow: 0 0 96px #8b5cf688, 0 0 0 32px #ec489944;}
+        }
+        .aiesec-logo-2025 {
+            width: 140px;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 32px #00c3ff);
+            animation: float 2s infinite alternate;
+        }
+        @keyframes float {
+            to { transform: translateY(-14px);}
+        }
+        .aiesec-title-2025 {
+            font-size: 3.6rem;
+            font-family: 'Orbitron', 'JetBrains Mono', monospace;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #00c3ff, #ffff1c, #8b5cf6, #ec4899, #00c3ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 32px #00c3ff, 0 0 8px #ffff1c;
+            animation: titleGlow 4s infinite alternate, gradientShift 12s infinite linear;
+        }
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 32px #00c3ff, 0 0 8px #ffff1c;}
+            100% { text-shadow: 0 0 64px #8b5cf6, 0 0 24px #ec4899;}
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%;}
+            100% { background-position: 100% 50%;}
+        }
+        .aiesec-role-2025 {
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+            color: #ffff1c;
+            text-shadow: 0 0 12px #00c3ff;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 2px;
+        }
+        .aiesec-story-2025 {
+            max-width: 700px;
+            margin: 2rem auto;
+            font-size: 1.3rem;
+            line-height: 1.85;
+            background: rgba(0,255,255,0.09);
+            padding: 2.5rem;
+            border-radius: 1.7rem;
+            box-shadow: 0 8px 48px #00c3ff44;
+            border: 3px solid #8b5cf6;
+            backdrop-filter: blur(10px);
+            font-family: 'JetBrains Mono', monospace;
+            animation: storyGlow 3s infinite alternate;
+        }
+        @keyframes storyGlow {
+            0% { box-shadow: 0 8px 48px #00c3ff44; border-color: #8b5cf6;}
+            100% { box-shadow: 0 16px 64px #ec489988; border-color: #ec4899;}
+        }
+        /* Glassmorphism cards */
+        .aiesec-cards-2025 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0 2rem 0;
+        }
+        .aiesec-card-2025 {
+            background: linear-gradient(135deg, #00c3ff33, #8b5cf633, #ffff1c22);
+            border: 3px solid #00c3ff;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 32px #00c3ff33, 0 0 24px #8b5cf6aa;
+            padding: 2rem 1.5rem;
+            min-width: 260px;
+            max-width: 320px;
+            color: #fff;
+            font-size: 1.15rem;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-family: 'JetBrains Mono', monospace;
+            animation: cardPulse 2.5s infinite alternate;
+            backdrop-filter: blur(6px);
+        }
+        @keyframes cardPulse {
+            0% { border-color: #00c3ff; box-shadow: 0 4px 32px #00c3ff33;}
+            100% { border-color: #ffff1c; box-shadow: 0 8px 48px #ffff1c99;}
+        }
+        .aiesec-card-2025 .card-glow {
+            position: absolute;
+            top: -40px; left: -40px;
+            width: 120px; height: 120px;
+            background: radial-gradient(circle, #00c3ff88 0%, transparent 80%);
+            z-index: 0;
+            pointer-events: none;
+            animation: glowMove 3s infinite alternate;
+        }
+        @keyframes glowMove {
+            0% { left: -40px; top: -40px;}
+            100% { left: 40px; top: 40px;}
+        }
+        .aiesec-card-2025:hover {
+            transform: scale(1.09) translateY(-8px);
+            box-shadow: 0 8px 48px #00c3ff99, 0 0 32px #ffff1c99, 0 0 32px #8b5cf6aa;
+            border-color: #ec4899;
+        }
+        .aiesec-cta-2025 {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #222;
+            background: linear-gradient(90deg, #00c3ff, #ffff1c, #8b5cf6);
+            border: none;
+            border-radius: 2rem;
+            box-shadow: 0 2px 24px #00c3ff99;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            font-family: 'Orbitron', 'JetBrains Mono', monospace;
+            letter-spacing: 2px;
+            animation: ctaPulse 2s infinite alternate;
+        }
+        @keyframes ctaPulse {
+            0% { box-shadow: 0 2px 24px #00c3ff99;}
+            100% { box-shadow: 0 8px 32px #ffff1c99;}
+        }
+        .aiesec-cta-2025:hover {
+            background: linear-gradient(90deg, #ffff1c, #00c3ff, #ec4899);
+            transform: scale(1.12);
+        }
+        /* Back button with particle burst */
+        .back-btn-2025 {
+            position: fixed;
+            top: 120px; /* below navbar */
+            left: 2rem;
+            z-index: 900;
+            background: linear-gradient(90deg, #8b5cf6, #00c3ff, #ffff1c);
+            color: #222;
+            border: 3px solid #00c3ff;
+            border-radius: 2rem;
+            padding: 0.8rem 2.2rem;
+            font-size: 1.1rem;
+            font-family: 'Orbitron', 'JetBrains Mono', monospace;
+            font-weight: 700;
+            box-shadow: 0 2px 24px #8b5cf6aa;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            animation: backPulse 2s infinite alternate;
+            overflow: hidden;
+        }
+        @keyframes backPulse {
+            0% { box-shadow: 0 2px 24px #8b5cf6aa;}
+            100% { box-shadow: 0 8px 32px #ffff1c99;}
+        }
+        .back-btn-2025:hover {
+            background: linear-gradient(90deg, #ffff1c, #00c3ff, #8b5cf6);
+            transform: scale(1.12);
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            .aiesec-hero-2025 { padding: 2.5rem 0.5rem; }
+            .aiesec-title-2025 { font-size: 2.1rem; }
+            .aiesec-role-2025 { font-size: 1.1rem; }
+            .aiesec-story-2025 { padding: 1.2rem; font-size: 1rem; }
+            .aiesec-cards-2025 { flex-direction: column; gap: 1.2rem; }
+            .back-btn-2025 { top: 1rem; left: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;}
+        }
+        /* New styles for 2025 vision */
+        .aiesec-logo-fixed {
+            position: fixed;
+            top: 120px; /* below navbar */
+            right: 2rem;
+            width: 170px;
+            height: 90px;
+            z-index: 900;
+            object-fit: cover;
+            filter: drop-shadow(0 0 32px #00c3ff) drop-shadow(0 0 12px #ffff1c);
+            background: rgba(0,0,0,0.2);
+            border-radius: 1.2rem;
+            border: 4px solid #8b5cf6;
+            box-shadow: 0 0 32px #00c3ff88;
+            transition: transform 0.2s;
+        }
+        .aiesec-logo-fixed:hover {
+            transform: scale(1.08) rotate(-4deg);
+            box-shadow: 0 0 64px #ec4899cc;
+        }
+        /* Navbar styles */
+        .navbar-2025 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100px;
+            background: linear-gradient(90deg, #0f2027 60%, #00c3ff 100%);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 24px #00c3ff55;
+            padding: 0;
+        }
+        .navbar-logo-2025 {
+            height: 100px;
+            width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: rgba(30,40,60,0.95);
+            border-top-left-radius: 1.2rem;
+            border-bottom-left-radius: 1.2rem;
+            box-shadow: 0 0 32px #00c3ff55;
+        }
+        .navbar-logo-img-2025 {
+            height: 80px;
+            width: 180px;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-left: 20px;
+            box-shadow: 0 0 24px #00c3ff88;
+            border: 3px solid #8b5cf6;
+            background: rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+        .navbar-logo-img-2025:hover {
+            transform: scale(1.06) rotate(-2deg);
+            box-shadow: 0 0 48px #ec4899cc;
+        }
+        .navbar-links-2025 {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            margin-left: 2rem;
+        }
+        .nav-link-2025 {
+            color: #fff;
+            font-family: 'Orbitron', 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-left: 2rem;
+            text-decoration: none;
+            letter-spacing: 2px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 1rem;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            position: relative;
+        }
+        .nav-link-2025:hover, .nav-link-2025.active {
+            background: linear-gradient(90deg, #8b5cf6, #ffff1c);
+            color: #222;
+            transform: scale(1.08);
+            box-shadow: 0 2px 16px #ec4899aa;
+        }
+        /* Extraordinary Footer */
+        .site-footer {
+            background: rgba(30, 40, 60, 0.9);
+            color: #fff;
+            padding: 3rem 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            position: relative;
+            z-index: 100;
+            border-top: 4px solid #8b5cf6;
+        }
+        .footer-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .footer-logo {
+            font-size: 2.5rem;
+            margin-right: 0.8rem;
+            filter: drop-shadow(0 0 16px #00c3ff);
+        }
+        .footer-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffff1c;
+            text-shadow: 0 0 8px #00c3ff;
+        }
+        .footer-details {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .footer-details span {
+            display: block;
+            margin: 0.2rem 0;
+            font-size: 1.1rem;
+        }
+        .footer-details a {
+            color: #00c3ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-details a:hover {
+            color: #ffff1c;
+        }
+        .footer-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #ec4899;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #bbb;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Neon animated grid background (outside border) -->
+    <canvas class="neon-grid-bg"></canvas>
+    <!-- Neon animated grid foreground (inside border) -->
+    <canvas class="neon-grid-inside"></canvas>
+    <!-- Futuristic Navbar -->
+    <nav class="navbar-2025">
+        <div class="navbar-logo-2025">
+            <img src="AISEC.jpg" alt="AIESEC Logo" class="navbar-logo-img-2025">
+        </div>
+        <div class="navbar-links-2025">
+            <a href="index.html" class="nav-link-2025">Home</a>
+            <a href="about.html" class="nav-link-2025">About</a>
+            <a href="projects.html" class="nav-link-2025">Projects</a>
+            <a href="contact.html" class="nav-link-2025">Contact</a>
+            <a href="aiesec.html" class="nav-link-2025 active">AIESEC</a>
+        </div>
+    </nav>
+    <!-- Back button (top left) -->
+    <button class="back-btn-2025" id="backBtn">← Back</button>
+    <div class="aiesec-hero-2025">
+        <div class="aiesec-title-2025">AIESEC: Pune Committee, 2025</div>
+        <div class="aiesec-role-2025">Incoming Global Teacher | Team Member | Pune, India</div>
+        <div class="aiesec-story-2025">
+            <p>
+                <b>Welcome to the future of youth leadership!</b> As a member of AIESEC Pune, I help shape tomorrow’s global educators, connecting cultures and minds in ways never imagined before.
+            </p>
+            <p>
+                In the <span style="color:#00c3ff;font-weight:700;">Incoming Global Teacher</span> department, we use AI-powered matching, quantum collaboration, and immersive exchanges to empower teachers from every continent. My role as a team member means I work with visionaries, organize transformative experiences, and help international educators make a real impact in India.
+            </p>
+            <p>
+                <span style="color:#ffff1c;font-weight:700;">Curious about how AIESEC is changing lives in 2025?</span> Explore the cards below and discover the magic behind the world’s largest youth-run organization!
+            </p>
+        </div>
+        <div class="aiesec-cards-2025">
+            <div class="aiesec-card-2025">
+                <div class="card-glow"></div>
+                <b>🌍 Global Impact</b>
+                <p>Connecting educators and students across 100+ countries using quantum networks and AI-driven exchanges.</p>
+            </div>
+            <div class="aiesec-card-2025">
+                <div class="card-glow"></div>
+                <b>🤖 AI Collaboration</b>
+                <p>Leveraging smart algorithms to match teachers with schools, ensuring every exchange is meaningful and transformative.</p>
+            </div>
+            <div class="aiesec-card-2025">
+                <div class="card-glow"></div>
+                <b>🚀 Future Skills</b>
+                <p>Empowering youth with skills for tomorrow: leadership, empathy, and global citizenship in a hyperconnected world.</p>
+            </div>
+            <div class="aiesec-card-2025">
+                <div class="card-glow"></div>
+                <b>🔗 Pune Committee</b>
+                <p>Where innovation meets tradition. Our team blends local wisdom with global vision to create lasting change.</p>
+            </div>
+        </div>
+        <a href="https://aiesec.org/" class="aiesec-cta-2025" target="_blank">Explore AIESEC Global</a>
+    </div>
+    <!-- Extraordinary Footer -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <span class="footer-logo">👨‍💻</span>
+                <span class="footer-title">@PKUNAKA ENGINEER</span>
+            </div>
+            <div class="footer-details">
+                <span>🌍 Zimbabwean Engineer Based in India</span>
+                <span>📧 <a href="mailto:pkunaka1engineer@gmail.com">pkunaka1engineer@gmail.com</a></span>
+                <span>🔗 
+                    <a href="https://github.com/pkunaka1engineer" target="_blank">GitHub</a> | 
+                    <a href="https://linkedin.com/in/pkunaka1engineer" target="_blank">LinkedIn</a> | 
+                    <a href="aiesec.html" target="_blank">AIESEC</a>
+                </span>
+            </div>
+            <div class="footer-quote">
+                <span>“Engineering the future, inspiring the world.”</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MR PKUNAKA. All rights reserved.
+        </div>
+    </footer>
+    <script>
+    // Neon animated grid background (outside border)
+    const canvasBg = document.querySelector('.neon-grid-bg');
+    const ctxBg = canvasBg.getContext('2d');
+    // Neon animated grid foreground (inside border)
+    const canvasInside = document.querySelector('.neon-grid-inside');
+    const ctxInside = canvasInside.getContext('2d');
+    function resizeCanvas() {
+        canvasBg.width = window.innerWidth;
+        canvasBg.height = window.innerHeight;
+        canvasInside.width = document.querySelector('.aiesec-hero-2025').offsetWidth;
+        canvasInside.height = document.querySelector('.aiesec-hero-2025').offsetHeight;
+        canvasInside.style.position = 'absolute';
+        canvasInside.style.left = document.querySelector('.aiesec-hero-2025').offsetLeft + 'px';
+        canvasInside.style.top = document.querySelector('.aiesec-hero-2025').offsetTop + 'px';
+        canvasInside.style.zIndex = 3;
+        canvasInside.style.pointerEvents = 'none';
+        canvasInside.style.opacity = 0.35;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('scroll', () => {
+        canvasInside.style.top = (document.querySelector('.aiesec-hero-2025').offsetTop - window.scrollY) + 'px';
+    });
+    resizeCanvas();
+
+    function drawGrid(ctx, w, h, spacing, color1, color2, shadowColor) {
+        ctx.clearRect(0,0,w,h);
+        for(let x=0;x<w;x+=spacing){
+            ctx.save();
+            ctx.strokeStyle = color1(x);
+            ctx.shadowColor = shadowColor;
+            ctx.shadowBlur = 12;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(x,0);
+            ctx.lineTo(x,h);
+            ctx.stroke();
+            ctx.restore();
+        }
+        for(let y=0;y<h;y+=spacing){
+            ctx.save();
+            ctx.strokeStyle = color2(y);
+            ctx.shadowColor = shadowColor;
+            ctx.shadowBlur = 12;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(0,y);
+            ctx.lineTo(w,y);
+            ctx.stroke();
+            ctx.restore();
+        }
+    }
+    function animateGrids() {
+        // Outside: blue/cyan
+        let spacingBg = 48 + 16 * Math.sin(Date.now()/800);
+        drawGrid(
+            ctxBg, canvasBg.width, canvasBg.height, spacingBg,
+            x => `hsl(${180 + (x/spacingBg*40+Date.now()/40)%60},100%,60%)`,
+            y => `hsl(${200 + (y/spacingBg*40+Date.now()/40)%60},100%,60%)`,
+            "#00c3ff"
+        );
+        // Inside: purple/pink/yellow
+        let spacingInside = 32 + 8 * Math.cos(Date.now()/600);
+        drawGrid(
+            ctxInside, canvasInside.width, canvasInside.height, spacingInside,
+            x => `hsl(${280 + (x/spacingInside*80+Date.now()/20)%80},100%,70%)`,
+            y => `hsl(${40 + (y/spacingInside*80+Date.now()/20)%80},100%,70%)`,
+            "#ec4899"
+        );
+        // Animated border ridge inside
+        ctxInside.save();
+        ctxInside.strokeStyle = "#8b5cf6";
+        ctxInside.lineWidth = 10;
+        ctxInside.shadowColor = "#ec4899";
+        ctxInside.shadowBlur = 32 + 16 * Math.abs(Math.sin(Date.now()/600));
+        ctxInside.strokeRect(12, 12, canvasInside.width-24, canvasInside.height-24);
+        ctxInside.restore();
+        requestAnimationFrame(animateGrids);
+    }
+    animateGrids();
+
+    // Particle burst for back button
+    document.getElementById('backBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        burstParticles(this);
+        setTimeout(()=>window.open('index.html','_self'), 400);
+    });
+    function burstParticles(btn) {
+        for(let i=0;i<18;i++){
+            let p=document.createElement('span');
+            p.style.position='absolute';
+            p.style.left=(btn.offsetLeft+btn.offsetWidth/2)+'px';
+            p.style.top=(btn.offsetTop+btn.offsetHeight/2)+'px';
+            p.style.width='8px';
+            p.style.height='8px';
+            p.style.borderRadius='50%';
+            p.style.background=`linear-gradient(90deg,#00c3ff,#ffff1c,#ec4899)`;
+            p.style.zIndex=9999;
+            p.style.pointerEvents='none';
+            p.style.transition='all 0.4s cubic-bezier(.6,-0.28,.74,.05)';
+            document.body.appendChild(p);
+            setTimeout(()=>{
+                p.style.transform=`translate(${Math.cos(i/3)*80}px,${Math.sin(i/3)*80}px) scale(0.1)`;
+                p.style.opacity='0';
+            },10);
+            setTimeout(()=>p.remove(),400);
+        }
+    }
+    </script>
+</body>
+</html>
