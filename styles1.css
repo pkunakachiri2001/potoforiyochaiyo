@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,14 +39,13 @@ body {
 
 /* Navigation Styles */
 #navbar {
-  position: relative; /* Or 'fixed' if you want sticky nav */
+  position: sticky;
   top: 0;
   width: 100%;
-  z-index: 10;
-  transition: all 0.3s ease;
-  background: #fff;   /* Or your navbar background */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-glow);
+  z-index: 100;
+  background: linear-gradient(90deg, #0f2027 0%, #00c3ff 100%);
+  border-bottom: 2px solid var(--accent-cyan);
+  box-shadow: 0 2px 24px #00c3ff;
 }
 
 .nav-container {
@@ -60,6 +63,8 @@ body {
   font-weight: 700;
   gap: 0.5rem;
   z-index: 2; /* Ensure brand is above background if needed */
+  color: #fff;
+  text-shadow: 0 0 12px #00c3ff, 0 0 24px #8b5cf6;
 }
 
 .brand-first {
@@ -331,6 +336,7 @@ body {
   overflow: hidden;
   transition: all 0.3s ease;
   transform: perspective(1000px);
+  box-shadow: 0 0 24px #00c3ff, 0 0 48px #8b5cf6;
 }
 
 .quantum-btn.primary {
@@ -664,7 +670,7 @@ body {
   .quantum-btn {
     padding: 0.9rem 1.5rem;
     font-size: 0.9rem;
-    min-height: 44px;
+    min-height: 48px;
   }
 
   /* Improved mobile navigation */
@@ -884,28 +890,84 @@ body {
     text-decoration: underline;
     font-weight: 600;
     transition: color 0.2s;
-}
+    transition: color 0.2s;
+}footer-details a:hover {
 .footer-details a:hover {
     color: #8b5cf6;
-}
-.footer-quote {
+}footer-quote {
+.footer-quote { italic;
     font-style: italic;
-    color: #ec4899;
+    color: #ec4899;1.2rem;
     margin-bottom: 1.2rem;
-    font-size: 1.1rem;
+    font-size: 1.1rem;tron', 'JetBrains Mono', monospace;
     font-family: 'Orbitron', 'JetBrains Mono', monospace;
-    letter-spacing: 1px;
+    letter-spacing: 1px; #00c3ff44;
     text-shadow: 0 0 8px #00c3ff44;
-}
-.footer-bottom {
+}footer-bottom {
+.footer-bottom {.95rem;
     font-size: 0.95rem;
-    color: #fff;
-    opacity: 0.8;
+    color: #fff;;
+    opacity: 0.8;.5rem;
     margin-top: 0.5rem;
-}
-@media (max-width: 700px) {
+}media (max-width: 700px) {
+@media (max-width: 700px) {e: 0.95rem; }
     .footer-main { font-size: 0.95rem; }
     .footer-brand { font-size: 1.1rem; }
-    .footer-logo { font-size: 1.5rem; }
-    .footer-quote { font-size: 0.95rem; }
+    .footer-logo { font-size: 1.5rem; } }
+    .footer-quote { font-size: 0.95rem; }}
+
+@media (max-width: 900px) {
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: linear-gradient(90deg, #00c3ff 0%, #8b5cf6 100%);
+    box-shadow: 0 8px 32px #00c3ff;
+    border-radius: 0 0 18px 18px;
+    padding: 1.5rem 0;
+    overflow: hidden;
+  } opacity: 0;
+  .mobile-menu.active { 0.3s, max-height 0.3s;
+    display: block;
+    opacity: 1;idden;
+    max-height: 400px;
+  }mobile-menu.active {
+  .mobile-menu a {;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2rem;
+    transition: background 0.2s, color 0.2s;
+  } font-weight: 600;
+  .mobile-menu a:hover,
+  .mobile-menu a.active {
+    background: rgba(0,255,255,0.15);r 0.2s;
+    color: #ffff1c;
+    border-radius: 8px;
+  }mobile-menu a.active {
+}   background: rgba(0,255,255,0.15);
+    color: #ffff1c;
+@media (max-width: 600px) {
+  .chat-modal {
+    right: 0;
+    left: 0;
+    bottom: 0;dth: 600px) {
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+  } bottom: 0;
+}   width: 100vw;
+
+
+
+
+
+
+}  font-size: 1.1rem;  min-height: 48px;.quantum-btn {.mobile-menu a,    max-width: 100vw;
+    border-radius: 0;
+  }
 }
