@@ -211,6 +211,66 @@
             .aiesec-cards-2025 { flex-direction: column; gap: 1.2rem; }
             .back-btn-2025 { top: 1rem; left: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem;}
         }
+        @media (max-width: 900px) {
+            .navbar-links-2025 {
+                display: none;
+            }
+            .mobile-menu-btn-2025 {
+                display: flex;
+                position: absolute;
+                right: 2rem;
+                top: 32px;
+                z-index: 1001;
+                flex-direction: column;
+                gap: 6px;
+                cursor: pointer;
+            }
+            .mobile-menu-btn-2025 span {
+                width: 32px;
+                height: 4px;
+                background: #00c3ff;
+                border-radius: 2px;
+                transition: all 0.3s;
+            }
+            .mobile-menu-2025 {
+                display: none;
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100vw;
+                background: linear-gradient(90deg, #00c3ff 0%, #8b5cf6 100%);
+                box-shadow: 0 8px 32px #00c3ff;
+                border-radius: 0 0 18px 18px;
+                padding: 2rem 0;
+                z-index: 1002;
+            }
+            .mobile-menu-2025.active {
+                display: block;
+            }
+            .mobile-menu-2025 a {
+                display: block;
+                color: #fff;
+                font-size: 1.3rem;
+                font-weight: 700;
+                text-align: center;
+                padding: 1.2rem 2rem;
+                text-decoration: none;
+                transition: background 0.2s, color 0.2s;
+            }
+            .mobile-menu-2025 a:hover {
+                background: rgba(0,255,255,0.15);
+                color: #ffff1c;
+                border-radius: 8px;
+            }
+        }
+        /* Accessibility: Focus states for cards and buttons */
+        .aiesec-card-2025:focus,
+        .aiesec-cta-2025:focus,
+        .back-btn-2025:focus,
+        .nav-link-2025:focus {
+            outline: 2px solid #00c3ff;
+            box-shadow: 0 0 32px #00c3ff;
+        }
         /* New styles for 2025 vision */
         .aiesec-logo-fixed {
             position: fixed;
@@ -419,6 +479,18 @@
         </div>
         <a href="https://aiesec.org/" class="aiesec-cta-2025" target="_blank">Explore AIESEC Global</a>
     </div>
+    <!-- Mobile Menu Button (Hamburger) -->
+    <div class="mobile-menu-btn-2025" onclick="toggleMobileMenu2025()">
+      <span></span><span></span><span></span>
+    </div>
+    <!-- Mobile Menu (Drawer) -->
+    <div class="mobile-menu-2025" id="mobileMenu2025">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="aiesec.html" class="active">AIESEC</a>
+    </div>
     <!-- Extraordinary Footer -->
     <footer class="site-footer">
         <div class="footer-main">
@@ -550,6 +622,11 @@
             },10);
             setTimeout(()=>p.remove(),400);
         }
+    }
+
+    // Toggle mobile menu visibility
+    function toggleMobileMenu2025() {
+      document.getElementById('mobileMenu2025').classList.toggle('active');
     }
     </script>
 </body>
