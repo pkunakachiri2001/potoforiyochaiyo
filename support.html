@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help Center - KUNAKA TECH</title>
+    <meta name="description" content="KUNAKA TECH Support Center - Report bugs, get help, and find answers to common questions.">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-prefix">KUNAKA</span>
+                <span class="brand-suffix">TECH</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="support.html" class="active">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-support">
+        <div class="hero-content">
+            <h1>Help & Support Center</h1>
+            <p>We're here to help. Report issues or get assistance with our apps.</p>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-grid">
+                <!-- FAQ Section -->
+                <div class="support-panel glass-card">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h4>How do I download videos with vidpana?</h4>
+                        <p>Simply paste the video URL, select quality, and tap download. Videos are saved to your device for offline viewing.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is the AI Homework Solver available offline?</h4>
+                        <p>Yes! Download content packs for offline access. Premium users get unlimited offline features.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I contact support?</h4>
+                        <p>Use the form below to report issues, or email us at support@kunaka.tech for detailed assistance.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What platforms are supported?</h4>
+                        <p>Currently available on Android (Google Play Store). iOS and web versions coming soon.</p>
+                    </div>
+                </div>
+
+                <!-- Support Form -->
+                <div class="support-form-container glass-card">
+                    <h3>Report an Issue</h3>
+                    <form id="supportForm" class="support-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="app">Which App?</label>
+                            <select id="app" name="app" required class="form-input">
+                                <option value="">Select an app</option>
+                                <option value="vidpana">vidpana</option>
+                                <option value="homework_solver">AI Homework Solver</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="issueType">Issue Type</label>
+                            <select id="issueType" name="issueType" required class="form-input">
+                                <option value="">Select issue type</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="crash">App Crash</option>
+                                <option value="performance">Performance Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Brief description" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Detailed Description</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please describe the issue in detail..." class="form-input"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Submit Report</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Email Support</h4>
+                    <p><a href="mailto:support@kunaka.tech">support@kunaka.tech</a></p>
+                    <p class="small-text">Response time: 24-48 hours</p>
+                </div>
+                <div class="contact-card">
+                    <h4>App Store</h4>
+                    <p><a href="#">Google Play Store</a></p>
+                    <p class="small-text">Rate and review our apps</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Social Media</h4>
+                    <p><a href="#">@KunakaTech</a></p>
+                    <p class="small-text">Follow for updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>KUNAKA TECH</h4>
+                <p>Professional Software & App Development</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026, NOW UPDATED KUNAKA TECH. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script src="support-form.js"></script>
+</body>
+</html>

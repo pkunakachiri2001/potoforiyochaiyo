@@ -434,9 +434,12 @@ const aiQuotes = [
   "In 2080, engineers are algorithms."
 ]
 function showAIQuote() {
+  const heroContent = document.querySelector('.hero-content')
+  if (!heroContent) return // Exit if .hero-content doesn't exist
+  
   const el = document.createElement('div')
   el.className = 'ai-quote'
-  document.querySelector('.hero-content').appendChild(el)
+  heroContent.appendChild(el)
   let idx = 0
   function typeQuote() {
     el.textContent = ''
@@ -519,3 +522,38 @@ runModel('neural.onnx', inputData);`
     }
     typeSample();
 });
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Navigation Active State Management
+// ═══════════════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', function() {
+    setActiveNavLink();
+});
+
+function setActiveNavLink() {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to current page link
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Handle root/index.html
+        if ((currentPage === '' || currentPage === 'index.html') && href === 'index.html') {
+            link.classList.add('active');
+        }
+        // Handle other pages
+        else if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
