@@ -2658,13 +2658,7 @@ input[type="button"]:hover {
 .about-hero {
   text-align: center;
   padding: 5rem 2rem;
-  background-image:
-    url('utsav-srestha-bAEtENrPjf4-unsplash.jpg'),
-    linear-gradient(135deg, rgba(10, 14, 39, 0.88) 0%, rgba(26, 31, 58, 0.84) 50%, rgba(10, 14, 39, 0.88) 100%);
-  background-attachment: fixed, scroll;
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-  background-size: cover, auto;
+  background: linear-gradient(135deg, rgba(10, 14, 39, 0.88) 0%, rgba(26, 31, 58, 0.84) 50%, rgba(10, 14, 39, 0.88) 100%);
   position: relative;
   overflow: hidden;
   min-height: 60vh;
