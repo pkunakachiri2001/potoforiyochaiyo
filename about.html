@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Panashe Kunaka | AI/ML Student & Engineer</title>
+  <title>About - Panashe Kunaka | Software Engineer & AI Specialist</title>
 
-  <meta name="description" content="Learn more about Panashe Kunaka, an AI/ML student and engineer passionate about software development, machine learning, and innovative technology projects.">
+  <meta name="description" content="Panashe Kunaka - Software Engineer specializing in full-stack development, machine learning, and scalable software architecture. Based in India, originally from Zimbabwe.">
   <link rel="canonical" href="https://pkunaka1engineer.me/about.html" />
 
   <!-- Stylesheets -->
@@ -19,35 +19,417 @@
   <link rel="icon" type="image/png" href="zimflag.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="About - Panashe Kunaka | AI/ML Student & Engineer">
-  <meta property="og:description" content="Get to know Panashe Kunaka — AI/ML student, engineer, and passionate developer with a vision for innovation.">
+  <meta property="og:title" content="About - Panashe Kunaka | Software Engineer">
+  <meta property="og:description" content="Panashe Kunaka - Full-Stack Engineer specializing in software architecture and machine learning solutions.">
   <meta property="og:url" content="https://pkunaka1engineer.me/about.html">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://pkunaka1engineer.me/zimflag.png">
+  <meta property="og:image" content="https://pkunaka1engineer.me/panaface.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About - Panashe Kunaka | AI/ML Student & Engineer">
-  <meta name="twitter:description" content="Discover the story of Panashe Kunaka, AI/ML student and engineer passionate about technology and innovation.">
-  <meta name="twitter:image" content="https://pkunaka1engineer.me/zimflag.png">
-</head>
+  <meta name="twitter:title" content="About - Panashe Kunaka | Software Engineer">
+  <meta name="twitter:description" content="Full-Stack Engineer specializing in scalable solutions and AI/ML applications.">
+  <meta name="twitter:image" content="https://pkunaka1engineer.me/panaface.jpg">
 
+  <style>
+    /* Professional About Page Styles */
+    .about-page {
+      background: var(--gradient-dark);
+      color: var(--text-primary);
+    }
+
+    .about-hero {
+      padding: 6rem 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border-glow);
+      background: linear-gradient(180deg, rgba(0, 217, 255, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .about-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Profile Section */
+    .about-section {
+      padding: 4rem 0;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .profile-image-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-frame {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--border-glow);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(167, 139, 250, 0.1));
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.2), inset 0 0 30px rgba(0, 217, 255, 0.1);
+    }
+
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-cyan);
+    }
+
+    .profile-text p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-glow);
+    }
+
+    .fact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .fact-label {
+      font-size: 0.85rem;
+      color: var(--text-accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .fact-value {
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-glow);
+      background: linear-gradient(180deg, rgba(0, 217, 255, 0.02) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .skills-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-list li {
+      padding: 0.75rem 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .skill-list li:last-child {
+      border-bottom: none;
+    }
+
+    .skill-list li:hover {
+      color: var(--accent-cyan);
+      padding-left: 0.5rem;
+    }
+
+    /* Approach Section */
+    .approach-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-glow);
+    }
+
+    .approach-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .approach-card {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(167, 139, 250, 0.05));
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .approach-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.15);
+    }
+
+    .card-header h3 {
+      font-size: 1.2rem;
+      color: var(--accent-cyan);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .approach-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-glow);
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(167, 139, 250, 0.1));
+      border: 1px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .cta-card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-cyan);
+    }
+
+    .cta-card p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent-cyan);
+      color: var(--primary-bg);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 217, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--secondary-bg);
+      border-top: 1px solid var(--border-glow);
+      padding: 3rem 0 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      color: var(--accent-cyan);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .footer-section p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-cyan);
+    }
+
+    .footer-section a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--accent-cyan);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-glow);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .quick-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .skills-section h2,
+      .approach-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
 
 <body>
     <div id="scroll-progress"></div>
+    
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <span class="brand-first">MR</span>
-                <span class="brand-second">PKUNAKA</span>
+                <span class="brand-first">PANASHE</span>
+                <span class="brand-second">KUNAKA</span>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html" class="active">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
-                <a href="aiesec.html" target="_blank" class="nav-link aiesec-link" style="color:#00c3ff;font-weight:700;">AIESEC</a>
             </div>
             <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <span></span>
@@ -60,216 +442,212 @@
             <a href="about.html" onclick="toggleMobileMenu()">About</a>
             <a href="projects.html" onclick="toggleMobileMenu()">Projects</a>
             <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
-            <a href="aiesec.html" target="_blank" onclick="toggleMobileMenu()" class="nav-link aiesec-link" style="color:#00c3ff;font-weight:700;">AIESEC</a>
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h1 class="section-title">About Me</h1>
-                    <div class="bio">
-                        <p>I'm MR PKUNAKA, a passionate AI & Machine Learning Engineer from Zimbabwe, currently based in India. With expertise spanning quantum computing, neural networks, blockchain technology, and web automation, I bridge the gap between cutting-edge research and practical applications.</p>
+    <!-- Main Content -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>About Me</h1>
+                    <p class="subtitle">Full-Stack Software Engineer | ML Practitioner | System Architecture</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="profile-grid">
+                    <div class="profile-image-wrapper">
+                        <div class="image-frame">
+                            <img src="panaface.jpg" alt="Panashe Kunaka - Software Engineer" />
+                        </div>
+                    </div>
+                    
+                    <div class="profile-text">
+                        <h2>Professional Overview</h2>
+                        <p>I'm a software engineer with expertise in full-stack development, machine learning, and scalable system design. My work focuses on building production-grade applications that solve real-world problems through clean code architecture and data-driven insights.</p>
                         
-                        <p>My journey in technology began with a fascination for how machines can learn and adapt. Today, I specialize in developing sophisticated AI systems that solve real-world problems, from neural network architectures to quantum algorithms.</p>
+                        <p>Originally from Zimbabwe and currently based in India, I bring cross-cultural perspective to collaborative projects. My engineering philosophy emphasizes maintainability, performance, and user-centric design.</p>
                         
-                        <p>When I'm not coding the future, you'll find me exploring the latest developments in quantum computing, contributing to open-source projects, or mentoring the next generation of AI engineers.</p>
+                        <div class="quick-facts">
+                            <div class="fact">
+                                <span class="fact-label">Location</span>
+                                <span class="fact-value">India (Zimbabwe native)</span>
+                            </div>
+                            <div class="fact">
+                                <span class="fact-label">Primary Focus</span>
+                                <span class="fact-value">Full-Stack Development & ML</span>
+                            </div>
+                            <div class="fact">
+                                <span class="fact-label">Expertise Level</span>
+                                <span class="fact-value">Production Systems</span>
+                            </div>
+                            <div class="fact">
+                                <span class="fact-label">Philosophy</span>
+                                <span class="fact-value">Clean Code & Scalability</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="skills-section">
+            <div class="container">
+                <h2>Technical Expertise</h2>
                 
-                <div class="profile-image">
-                    <div class="image-container">
-                        <img src="/panaface.jpg" alt="MR PKUNAKA - AI Engineer" />
-                        <div class="image-glow"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills Section -->
-            <div class="skills-section">
-                <h2 class="skills-title">Technical Expertise</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
-                        <div class="skill-item">
-                            <span>Neural Networks</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Deep Learning</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Computer Vision</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
-                        </div>
+                    <div class="skill-card">
+                        <h3>Backend Development</h3>
+                        <ul class="skill-list">
+                            <li>Python (Django, FastAPI)</li>
+                            <li>Node.js (Express, NestJS)</li>
+                            <li>Database Design (SQL, NoSQL)</li>
+                            <li>API Architecture & REST Design</li>
+                            <li>Microservices & System Design</li>
+                        </ul>
                     </div>
 
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript/TypeScript</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Rust</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
-                        </div>
+                    <div class="skill-card">
+                        <h3>Frontend Development</h3>
+                        <ul class="skill-list">
+                            <li>JavaScript / TypeScript</li>
+                            <li>React & React Native</li>
+                            <li>UI/UX Implementation</li>
+                            <li>Performance Optimization</li>
+                            <li>Responsive Web Design</li>
+                        </ul>
                     </div>
 
-                    <div class="skill-category">
+                    <div class="skill-card">
+                        <h3>Machine Learning</h3>
+                        <ul class="skill-list">
+                            <li>Neural Networks & Deep Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Natural Language Processing</li>
+                            <li>Model Deployment & MLOps</li>
+                            <li>Data Analysis & Feature Engineering</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>DevOps & Infrastructure</h3>
+                        <ul class="skill-list">
+                            <li>Docker & Containerization</li>
+                            <li>Cloud Platforms (AWS, GCP)</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Monitoring & Logging</li>
+                            <li>Infrastructure as Code</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Tools & Practices</h3>
+                        <ul class="skill-list">
+                            <li>Git & Version Control</li>
+                            <li>Testing & QA (Unit, Integration)</li>
+                            <li>Agile Methodologies</li>
+                            <li>Code Review & Documentation</li>
+                            <li>Performance Profiling</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
                         <h3>Emerging Technologies</h3>
-                        <div class="skill-item">
-                            <span>Quantum Computing</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Blockchain</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span>WebAssembly</span>
-                            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
-                        </div>
+                        <ul class="skill-list">
+                            <li>Web Assembly (WASM)</li>
+                            <li>Open Source Contribution</li>
+                            <li>Technical Writing</li>
+                            <li>Mentorship & Knowledge Sharing</li>
+                            <li>Continuous Learning</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Curiosity Callout -->
-            <div class="curiosity-callout" style="margin:2rem 0;padding:1rem 2rem;background:linear-gradient(90deg,#00c3ff,#ffff1c);color:#222;border-radius:1rem;font-weight:600;">
-                <span>🌍 Ever wondered how global youth leadership really works? <a href="aiesec.html" target="_blank" style="color:#0f2027;text-decoration:underline;font-weight:700;">Discover my AIESEC journey!</a></span>
+        <!-- Work Approach Section -->
+        <section class="approach-section">
+            <div class="container">
+                <h2>Engineering Approach</h2>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="card-header">
+                            <h3>Code Quality</h3>
+                        </div>
+                        <p>I prioritize clean, maintainable code with comprehensive testing. Every line of code is written with the next developer in mind, following established design patterns and best practices.</p>
+                    </div>
+
+                    <div class="approach-card">
+                        <div class="card-header">
+                            <h3>Scalability</h3>
+                        </div>
+                        <p>Building systems designed to scale. From database optimization to distributed architectures, I ensure applications perform efficiently as they grow.</p>
+                    </div>
+
+                    <div class="approach-card">
+                        <div class="card-header">
+                            <h3>Collaboration</h3>
+                        </div>
+                        <p>Effective communication with cross-functional teams. Clear documentation, constructive code reviews, and open feedback loops drive better outcomes.</p>
+                    </div>
+
+                    <div class="approach-card">
+                        <div class="card-header">
+                            <h3>Continuous Learning</h3>
+                        </div>
+                        <p>The tech landscape evolves rapidly. I stay current through technical writing, open source contributions, and hands-on experimentation with emerging technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Let's Build Something Together</h2>
+                    <p>Whether you have a project in mind or want to discuss technical challenges, I'm always open to collaboration.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        <a href="projects.html" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Panashe Kunaka</h4>
+                <p>Software Engineer & ML Practitioner</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/pkunakachiri2001" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/pkunaka1engineer" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Email</h4>
+                <a href="mailto:panachiri55@gmail.com">panachiri55@gmail.com</a>
             </div>
         </div>
-    </section>
-
-    <!-- Chatbot UI -->
-    <div class="ai-chat-bubble" onclick="openChatModal()">
-      <span>🤖 Need help? Ask the AI Engineer!</span>
-    </div>
-    <div id="chatModal" class="chat-modal">
-      <div class="chat-header">AI Engineer Chatbot <span onclick="closeChatModal()" style="cursor:pointer;">✖</span></div>
-      <div id="chatMessages" class="chat-messages"></div>
-      <div class="chat-input-row">
-        <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off" />
-        <button onclick="sendChatMessage()">Send</button>
-      </div>
-    </div>
-
-    <!-- Mouse Trail -->
-    <div class="mouse-trail" id="mouseTrail"></div>
-
-    <!-- Extraordinary Footer -->
-<footer class="site-footer">
-    <div class="footer-main">
-        <div class="footer-brand">
-            <span class="footer-logo">👨‍💻</span>
-            <span class="footer-title">@PKUNAKA ENGINEER</span>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Panashe Kunaka. All rights reserved.</p>
         </div>
-        <div class="footer-details">
-            <span>🌍 Zimbabwean Engineer Based in India</span>
-            <span>📧 <a href="mailto:panachiri55@gmail.com">panachiri55@gmail.com</a></span>
-            <span>🔗 
-                <a href="https://github.com/pkunakachiri2001" target="_blank">GitHub</a> | 
-                <a href="https://linkedin.com/in/pkunaka1engineer" target="_blank">LinkedIn</a> | 
-                <a href="aiesec.html" target="_blank">AIESEC</a>
-            </span>
-        </div>
-        <div class="footer-quote">
-            <span>“Engineering the future, inspiring the world.”</span>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2025 MR PKUNAKA. All rights reserved.
-    </div>
-</footer>
+    </footer>
 
-    <script src="neural-networks.js"></script>
     <script src="animations.js"></script>
-    <script>
-function openChatModal() {
-    document.getElementById('chatModal').classList.add('active');
-}
-function closeChatModal() {
-    document.getElementById('chatModal').classList.remove('active');
-}
-function appendChatMessage(sender, text) {
-    const chatMessages = document.getElementById('chatMessages');
-    const msgDiv = document.createElement('div');
-    msgDiv.innerHTML = `<b>${sender}:</b> ${text}`;
-    chatMessages.appendChild(msgDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-async function sendChatMessage() {
-    const input = document.getElementById('chatInput');
-    const userMsg = input.value.trim();
-    if (!userMsg) return;
-    appendChatMessage('You', userMsg);
-    input.value = '';
-    appendChatMessage('AI', 'Thinking...');
-    setTimeout(() => {
-        const chatMessages = document.getElementById('chatMessages');
-        chatMessages.lastChild.remove();
-        const msg = userMsg.toLowerCase();
-        let aiMsg = "Sorry, I couldn't understand. Try asking about my skills, projects, or background!";
-
-        // Flexible matching for more user phrases
-        if (msg.match(/hello|hi|hey|greetings/)) {
-            aiMsg = "Hello! How can I help you today?";
-        } else if (msg.match(/name|who are you|your name/)) {
-            aiMsg = "I'm your AI Engineer chatbot, MR PKUNAKA!";
-        } else if (msg.match(/zimbabwe|where are you from/)) {
-            aiMsg = "Yes, I'm originally from Zimbabwe!";
-        } else if (msg.match(/india|where do you live|location|based in/)) {
-            aiMsg = "I'm currently based in India.";
-        } else if (msg.match(/project|projects|work on|what do you do/)) {
-            aiMsg = "I work on AI, quantum computing, blockchain, and web automation projects. Ask for details!";
-        } else if (msg.match(/skills|expertise|what can you do|technical skills|abilities/)) {
-            aiMsg = "My skills include neural networks, deep learning, computer vision, Python, JavaScript, Rust, quantum computing, blockchain, and WebAssembly.";
-        } else if (msg.match(/ai|machine learning|artificial intelligence/)) {
-            aiMsg = "I specialize in AI and machine learning, including neural networks and deep learning.";
-        } else if (msg.match(/quantum|quantum computing/)) {
-            aiMsg = "Quantum computing is one of my passions! I work with quantum algorithms and research.";
-        } else if (msg.match(/blockchain|crypto|smart contract/)) {
-            aiMsg = "I have experience with blockchain technology and smart contracts.";
-        } else if (msg.match(/web automation|automation|automate/)) {
-            aiMsg = "I build web automation tools using Python and JavaScript.";
-        } else if (msg.match(/python/)) {
-            aiMsg = "Python is my main programming language for AI and automation.";
-        } else if (msg.match(/javascript|typescript/)) {
-            aiMsg = "I use JavaScript and TypeScript for web development and automation.";
-        } else if (msg.match(/rust/)) {
-            aiMsg = "Rust is great for performance-critical applications!";
-        } else if (msg.match(/open source|github|contribute/)) {
-            aiMsg = "I contribute to open-source projects and love collaborating!";
-        } else if (msg.match(/mentor|mentoring|teach|help others/)) {
-            aiMsg = "I enjoy mentoring new AI engineers and sharing knowledge.";
-        } else if (msg.match(/contact|how can i contact you|reach you|get in touch/)) {
-            aiMsg = "You can reach me via the contact page!";
-        } else if (msg.match(/hobby|free time|interests|what do you like/)) {
-            aiMsg = "I enjoy exploring new tech, reading, and contributing to open source.";
-        } else if (msg.match(/portfolio|website|about this site/)) {
-            aiMsg = "This website is my portfolio! Check out my projects page for more.";
-        } else if (msg.match(/education|study|background|school|degree/)) {
-            aiMsg = "I have a strong background in computer science and AI.";
-        } else if (msg.match(/future|plans|goals|what's next/)) {
-            aiMsg = "I'm excited about the future of AI, quantum computing, and blockchain!";
-        } else if (msg.match(/thanks|thank you|thx|appreciate/)) {
-            aiMsg = "You're welcome! Let me know if you have more questions.";
-        } else if (msg.match(/bye|goodbye|see you|later/)) {
-            aiMsg = "Goodbye! Have a great day!";
-        } else if (msg.match(/i want to know more|tell me more|more info|details|info/)) {
-            aiMsg = "Sure! You can ask about my skills, projects, education, or anything else about my work and background.";
-        }
-
-        appendChatMessage('AI', aiMsg);
-    }, 700);
-}
-document.getElementById('chatInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') sendChatMessage();
-});   
+</body>
+</html>

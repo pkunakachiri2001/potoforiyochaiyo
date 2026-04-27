@@ -226,22 +226,6 @@
         </div>
     </section>
 
-    <!-- Chatbot UI -->
-    <div class="ai-chat-bubble" onclick="openChatModal()">
-      <span>🤖 Questions? Chat with us!</span>
-    </div>
-    <div id="chatModal" class="chat-modal">
-      <div class="chat-header">KUNAKA TECH Support <span onclick="closeChatModal()" style="cursor:pointer;">✖</span></div>
-      <div id="chatMessages" class="chat-messages"></div>
-      <div class="chat-input-row">
-        <input type="text" id="chatInput" placeholder="Type your question..." autocomplete="off" />
-        <button onclick="sendChatMessage()">Send</button>
-      </div>
-    </div>
-
-    <!-- Mouse Trail -->
-    <div class="mouse-trail" id="mouseTrail"></div>
-
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-main">
@@ -251,7 +235,7 @@
             </div>
             <div class="footer-details">
                 <span>🌍 Professional Software Solutions</span>
-                <span>📧 <a href="mailto:contact@kunaka.tech">contact@kunaka.tech</a></span>
+                <span>📧 <a href="mailto:panachiri55@gmail.com">panachiri55@gmail.com</a></span>
                 <span>🔗 
                     <a href="https://github.com/pkunakachiri2001" target="_blank">GitHub</a> | 
                     <a href="https://linkedin.com/in/pkunaka1engineer" target="_blank">LinkedIn</a> | 
@@ -263,63 +247,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026, NOW UPDATED KUNAKA TECH. All rights reserved.
+            &copy; 2026 KUNAKA TECH. All rights reserved.
         </div>
     </footer>
 
-    <script src="neural-networks.js"></script>
     <script src="animations.js"></script>
-    <script>
-function openChatModal() {
-    document.getElementById('chatModal').classList.add('active');
-}
-function closeChatModal() {
-    document.getElementById('chatModal').classList.remove('active');
-}
-function appendChatMessage(sender, text) {
-    const chatMessages = document.getElementById('chatMessages');
-    const msgDiv = document.createElement('div');
-    msgDiv.innerHTML = `<b>${sender}:</b> ${text}`;
-    chatMessages.appendChild(msgDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-async function sendChatMessage() {
-    const input = document.getElementById('chatInput');
-    const userMsg = input.value.trim();
-    if (!userMsg) return;
-    appendChatMessage('You', userMsg);
-    input.value = '';
-    appendChatMessage('AI', 'Thinking...');
-    setTimeout(() => {
-        const chatMessages = document.getElementById('chatMessages');
-        chatMessages.lastChild.remove();
-        const msg = userMsg.toLowerCase();
-        let aiMsg = "Thanks for your question! Feel free to reach out at contact@kunaka.tech for more details.";
-
-        if (msg.match(/hello|hi|hey|greetings/)) {
-            aiMsg = "Hello! Welcome to KUNAKA TECH. How can we help you?";
-        } else if (msg.match(/services|what do you offer|what can you do/)) {
-            aiMsg = "We specialize in AI/ML development, mobile app creation, custom software solutions, and emerging technologies like blockchain and quantum computing.";
-        } else if (msg.match(/product|products|app/)) {
-            aiMsg = "Check out our Products page to see our latest applications! We have vidpana and AI Homework Solver available on Google Play Store.";
-        } else if (msg.match(/contact|reach|inquiry|business/)) {
-            aiMsg = "You can reach us at contact@kunaka.tech or visit our Contact page. We'd love to discuss your project!";
-        } else if (msg.match(/pricing|cost|price/)) {
-            aiMsg = "Pricing varies based on project scope. Please contact us for a custom quote tailored to your needs.";
-        } else if (msg.match(/timeline|how long|duration|how fast/)) {
-            aiMsg = "Project timelines depend on complexity. Contact us to discuss your specific requirements.";
-        } else if (msg.match(/team|who|founder|panashe/)) {
-            aiMsg = "KUNAKA TECH was founded by Panashe Kunaka, an experienced AI and Software Engineer. We deliver professional, high-quality solutions.";
-        } else if (msg.match(/technologies|tech stack|tools/)) {
-            aiMsg = "We work with Python, JavaScript, React, Node.js, TensorFlow, PyTorch, Flutter, AWS, GCP, and many more modern technologies.";
-        }
-
-        appendChatMessage('KUNAKA TECH', aiMsg);
-    }, 700);
-}
-document.getElementById('chatInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') sendChatMessage();
-});
-    </script>
 </body>
 </html>
