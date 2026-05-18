@@ -1,5 +1,71 @@
-# robots.txt
+# robots.txt for KUNAKA TECH - Professional Web Development from Zimbabwe
+# Advanced SEO Configuration for Optimal Search Engine Indexing
+
+# Default rules for all search engines
 User-agent: *
 Allow: /
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /images/
+Allow: /assets/
 
+# Block system files and private directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+Disallow: *.pdf
+Disallow: /temp/
+
+# Google Search Bot - Specific Optimization
+User-agent: Googlebot
+Allow: /
+Allow: *.html$
+Allow: *.json$
+Crawl-delay: 0
+Request-rate: 1
+
+# Bing Bot - Search Engine Indexing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+# Yahoo Slurp
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Baidu Spider (Chinese search engine for India/African reach)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# Yandex Bot
+User-agent: YandexBot
+Allow: /
+
+# Block aggressive crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# Sitemap Locations - Multiple for redundancy and global reach
 Sitemap: https://pkunaka1engineer.me/sitemap.xml
+Sitemap: https://www.pkunaka1engineer.me/sitemap.xml
+
+# Zimbabwe-Specific Local Business Optimization
+# Enables local search engine discovery
+Comment: Optimized for Zimbabwe, South Africa, Zambia, India, Germany, UK markets

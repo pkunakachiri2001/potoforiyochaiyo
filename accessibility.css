@@ -1,0 +1,304 @@
+/* ========================================
+   ACCESSIBILITY & PERFORMANCE OPTIMIZATION
+   ======================================== */
+
+/* Focus Visible for Keyboard Navigation */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove outline on mouse click but keep on keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure proper contrast ratios */
+body {
+  color: var(--text-primary);
+  background-color: var(--primary-bg);
+}
+
+a {
+  color: var(--accent-cyan);
+}
+
+a:visited {
+  color: var(--accent-purple);
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-cyan);
+  color: var(--primary-bg);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  body {
+    border: 1px solid var(--text-primary);
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* Dark mode is default, but support light mode preference */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-bg: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+  }
+}
+
+/* Ensure text is readable at all times */
+body {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Improve link underlines */
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Better button styles */
+button,
+input[type="button"],
+input[type="submit"] {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.8rem 1rem;
+  min-height: 48px;
+  min-width: 48px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+}
+
+/* Better form inputs */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px; /* Prevents iOS zoom */
+  border: 2px solid var(--border-glow);
+  border-radius: 8px;
+  padding: 0.8rem;
+  min-height: 44px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+
+/* Image alt text support */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure headings are semantic */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+h1:first-child,
+h2:first-child {
+  margin-top: 0;
+}
+
+/* Lists should be readable */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Performance Optimization */
+
+/* Use system fonts when available */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap; /* Show fallback while loading */
+}
+
+/* Enable GPU acceleration for animations */
+.service-card,
+.website-card,
+.project-card,
+.hosting-feature,
+.country-card {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Lazy loading for images */
+img[loading="lazy"] {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Optimize transitions */
+* {
+  transition-property: opacity, transform, background-color, color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+/* Disable transitions during page load */
+.preload * {
+  transition: none !important;
+}
+
+/* Print styles for better printing */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+  }
+  
+  nav,
+  .mobile-menu,
+  .cta-section,
+  .quantum-buttons {
+    display: none;
+  }
+  
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Zoom support */
+body {
+  zoom: 1;
+}
+
+/* Proper line height for readability */
+body {
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* Better list readability */
+ul, ol {
+  line-height: 1.8;
+}
+
+/* Ensure buttons don't wrap text unnecessarily */
+button,
+.btn-primary,
+.cta-btn {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Performance: Reduce layout recalculations */
+.fixed-width-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Smooth scrolling is enabled in base CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scrolling performance */
+.scrollable-section {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Better form styling for accessibility */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* Visible focus for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.5);
+}
+
+/* Better mobile input handling */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 44px;
+  }
+  
+  button {
+    min-height: 48px;
+  }
+}
