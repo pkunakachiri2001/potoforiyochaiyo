@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Resources | KUNAKA TECH - Web Development & AI Solutions</title>
+    <meta name="description" content="Expert insights on web development, AI solutions, and software engineering from Panashe Kunaka. In-depth guides, tutorials, and case studies.">
+    <meta name="author" content="Panashe Kunaka - KUNAKA TECH">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Schema for Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "KUNAKA TECH Blog",
+      "description": "Expert insights on web development, AI, and software engineering",
+      "url": "https://pkunaka1engineer.me/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "Panashe Kunaka",
+        "url": "https://pkunaka1engineer.me/about.html"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="zimflag.png">
+
+    <style>
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #00d9ff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            border-color: rgba(0, 217, 255, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .blog-card-date {
+            color: #00d9ff;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .blog-card-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .blog-tag {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: #00d9ff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .blog-card-read {
+            color: #a78bfa;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card-read:hover {
+            gap: 15px;
+            color: #00d9ff;
+        }
+
+        .blog-card-read::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card-read::after {
+            transform: translateX(5px);
+        }
+
+        .author-info-section {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(167, 139, 250, 0.05));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .author-info-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .author-bio {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">KUNAKA<span>TECH</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Expert Insights & Guides</h1>
+            <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.7); margin-top: 20px;">
+                In-depth articles on web development, AI solutions, and software engineering best practices
+            </p>
+        </div>
+
+        <!-- Author Info -->
+        <div class="author-info-section">
+            <h2>Written by Panashe Kunaka</h2>
+            <div class="author-bio">
+                <p>
+                    <strong>Panashe Kunaka</strong> is a Software Engineer and AI/ML specialist with expertise in full-stack web development, 
+                    machine learning, blockchain technologies, and cloud solutions. With a passion for creating innovative software solutions, 
+                    Panashe has built numerous web applications, mobile apps, and AI-powered systems for clients across Zimbabwe, South Africa, 
+                    India, Germany, and the UK.
+                </p>
+            </div>
+        </div>
+
+        <div class="blog-posts">
+            <!-- Article 1 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-20">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-20">May 20, 2026</div>
+                <h3 itemprop="headline">Building Responsive Web Applications in 2026</h3>
+                <p itemprop="description">
+                    Learn the latest techniques for creating responsive web applications that work flawlessly across all devices. 
+                    This comprehensive guide covers mobile-first design, CSS Grid, Flexbox, and modern JavaScript frameworks.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">Web Development</span>
+                    <span class="blog-tag">CSS</span>
+                    <span class="blog-tag">Responsive Design</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-18">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-18">May 18, 2026</div>
+                <h3 itemprop="headline">SEO Optimization: Getting Your Website Recognized by AI Search Engines</h3>
+                <p itemprop="description">
+                    Discover how to optimize your website for AI-powered search engines. Learn about E-E-A-T signals, structured data, 
+                    and how to ensure your content is recognized and cited by Google's AI features.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">SEO</span>
+                    <span class="blog-tag">AI</span>
+                    <span class="blog-tag">Search Engines</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-15">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-15">May 15, 2026</div>
+                <h3 itemprop="headline">AI-Powered Web Development: Building Smarter Applications</h3>
+                <p itemprop="description">
+                    Explore how to integrate AI and machine learning into your web applications. Learn about APIs, pre-trained models, 
+                    and best practices for building intelligent, responsive applications.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">AI/ML</span>
+                    <span class="blog-tag">Python</span>
+                    <span class="blog-tag">Web Dev</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-12">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-12">May 12, 2026</div>
+                <h3 itemprop="headline">Cloud Solutions: Hosting Your Web Application on Azure</h3>
+                <p itemprop="description">
+                    A step-by-step guide to deploying and scaling web applications on Microsoft Azure. Learn about containers, 
+                    microservices, and best practices for cloud-native development.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">Cloud</span>
+                    <span class="blog-tag">Azure</span>
+                    <span class="blog-tag">DevOps</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-10">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-10">May 10, 2026</div>
+                <h3 itemprop="headline">Performance Optimization: Making Your Website Lightning Fast</h3>
+                <p itemprop="description">
+                    Learn techniques to optimize your website's performance and improve user experience. Covers image optimization, 
+                    caching strategies, code splitting, and performance monitoring.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">Performance</span>
+                    <span class="blog-tag">UX</span>
+                    <span class="blog-tag">Optimization</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+                <meta itemprop="author" content="Panashe Kunaka">
+                <meta itemprop="datePublished" content="2026-05-08">
+                <div class="blog-card-date itemprop="dateModified" content="2026-05-08">May 8, 2026</div>
+                <h3 itemprop="headline">Blockchain & Web3: Building Decentralized Applications</h3>
+                <p itemprop="description">
+                    An introduction to blockchain technology and Web3 development. Learn about smart contracts, decentralized apps, 
+                    and how to integrate blockchain into your applications.
+                </p>
+                <div class="blog-card-tags">
+                    <span class="blog-tag">Blockchain</span>
+                    <span class="blog-tag">Web3</span>
+                    <span class="blog-tag">Solidity</span>
+                </div>
+                <a href="#" class="blog-card-read" itemprop="url">Read Full Article</a>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>KUNAKA TECH</h4>
+                <p>Professional Software Solutions</p>
+                <p>📧 <a href="mailto:panachiri55@gmail.com">panachiri55@gmail.com</a></p>
+                <p>🔗 <a href="https://github.com/pkunakachiri2001">GitHub</a> | <a href="https://linkedin.com/in/pkunaka1engineer">LinkedIn</a> | <a href="privacy-policy.html">Privacy</a></p>
+            </div>
+            <div class="footer-section">
+                <p>"Building Tomorrow's Solutions Today."</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026, KUNAKA TECH. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="neural-networks.js"></script>
+    <script src="animations.js"></script>
+    <script src="mobile-optimize.js"></script>
+    <script src="seo-optimizer.js"></script>
+    <script src="professional-design.js"></script>
+</body>
+</html>

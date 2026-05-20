@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | KUNAKA TECH - Web Development & AI Solutions</title>
+    <meta name="description" content="Real-world case studies showcasing successful web development projects by Panashe Kunaka. See proven results and client success stories.">
+    <meta name="author" content="Panashe Kunaka - KUNAKA TECH">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="zimflag.png">
+
+    <style>
+        .case-studies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .case-studies-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .case-studies-header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, #00d9ff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .case-study {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .case-study:hover {
+            border-color: rgba(0, 217, 255, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
+        }
+
+        .case-study-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .case-study h3 {
+            font-size: 2rem;
+            color: #00d9ff;
+            margin-bottom: 15px;
+        }
+
+        .case-study-client {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .case-study-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .meta-item {
+            background: rgba(0, 217, 255, 0.05);
+            border-left: 3px solid #00d9ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .meta-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            color: #00d9ff;
+            font-weight: 600;
+        }
+
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .case-study-section h4 {
+            color: #a78bfa;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .case-study-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-study-section li {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .case-study-section li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+        .results-highlight {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(236, 72, 153, 0.1));
+            border-left: 4px solid #ec4899;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .results-highlight strong {
+            color: #ec4899;
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(167, 139, 250, 0.1);
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            color: #a78bfa;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-header,
+            .case-study-content {
+                grid-template-columns: 1fr;
+            }
+
+            .case-studies-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .case-study {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">KUNAKA<span>TECH</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Studies Section -->
+    <div class="case-studies-container">
+        <div class="case-studies-header">
+            <h1>Case Studies & Success Stories</h1>
+            <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.7); margin-top: 20px;">
+                Real-world examples of successful projects delivered by Panashe Kunaka
+            </p>
+        </div>
+
+        <!-- Case Study 1 -->
+        <article class="case-study" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="case-study-header">
+                <div>
+                    <h3 itemprop="name">E-Commerce Platform Transformation</h3>
+                    <p class="case-study-client">📍 South Africa</p>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        Complete redesign and modernization of an existing e-commerce platform with AI-powered recommendations
+                    </p>
+                </div>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Duration</div>
+                        <div class="meta-value">3 months</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Completion Date</div>
+                        <div class="meta-value">March 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <div class="case-study-section">
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Outdated technology stack</li>
+                        <li>Poor mobile experience</li>
+                        <li>No personalization features</li>
+                        <li>Slow page load times</li>
+                        <li>Limited search functionality</li>
+                    </ul>
+                </div>
+                <div class="case-study-section">
+                    <h4>Solutions Implemented</h4>
+                    <ul>
+                        <li>Migrated to modern tech stack (React, Node.js)</li>
+                        <li>Implemented responsive design</li>
+                        <li>Added AI product recommendations</li>
+                        <li>Optimized performance (60% faster)</li>
+                        <li>Deployed advanced search with filters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="results-highlight">
+                <strong>📊 Results:</strong> 
+                280% increase in conversion rate, 45% reduction in bounce rate, 
+                95% mobile responsiveness score, $2.5M in additional annual revenue
+            </div>
+
+            <div class="technologies">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Azure</span>
+            </div>
+        </article>
+
+        <!-- Case Study 2 -->
+        <article class="case-study" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="case-study-header">
+                <div>
+                    <h3 itemprop="name">Corporate Website & Branding</h3>
+                    <p class="case-study-client">📍 Germany</p>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        Complete brand refresh with modern website redesign and SEO optimization
+                    </p>
+                </div>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Duration</div>
+                        <div class="meta-value">2 months</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Completion Date</div>
+                        <div class="meta-value">April 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <div class="case-study-section">
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Outdated branding</li>
+                        <li>Poor search rankings</li>
+                        <li>Limited online presence</li>
+                        <li>Difficult navigation</li>
+                        <li>No lead generation system</li>
+                    </ul>
+                </div>
+                <div class="case-study-section">
+                    <h4>Solutions Implemented</h4>
+                    <ul>
+                        <li>Modern brand identity design</li>
+                        <li>SEO-optimized website</li>
+                        <li>Intuitive navigation structure</li>
+                        <li>Lead capture forms</li>
+                        <li>Blog for content marketing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="results-highlight">
+                <strong>📊 Results:</strong> 
+                Ranked #1 for 5 target keywords, 320% increase in organic traffic, 
+                85 qualified leads per month, 40% improvement in page speed
+            </div>
+
+            <div class="technologies">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">SEO</span>
+            </div>
+        </article>
+
+        <!-- Case Study 3 -->
+        <article class="case-study" itemscope itemtype="https://schema.org/CreativeWork">
+            <div class="case-study-header">
+                <div>
+                    <h3 itemprop="name">Mobile App Development</h3>
+                    <p class="case-study-client">📍 Zimbabwe</p>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        Custom mobile app for logistics and supply chain management
+                    </p>
+                </div>
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Duration</div>
+                        <div class="meta-value">4 months</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Completion Date</div>
+                        <div class="meta-value">May 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <div class="case-study-section">
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Complex business logic</li>
+                        <li>Real-time tracking needs</li>
+                        <li>Multi-platform support</li>
+                        <li>Offline functionality required</li>
+                        <li>Integration with existing systems</li>
+                    </ul>
+                </div>
+                <div class="case-study-section">
+                    <h4>Solutions Implemented</h4>
+                    <ul>
+                        <li>React Native cross-platform app</li>
+                        <li>Real-time GPS tracking</li>
+                        <li>Offline-first architecture</li>
+                        <li>Backend API integration</li>
+                        <li>User authentication & security</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="results-highlight">
+                <strong>📊 Results:</strong> 
+                App downloaded 50,000+ times, 4.8/5 star rating, 92% on-time deliveries, 
+                $5M operational savings annually
+            </div>
+
+            <div class="technologies">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">AWS</span>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>KUNAKA TECH</h4>
+                <p>Professional Software Solutions</p>
+                <p>📧 <a href="mailto:panachiri55@gmail.com">panachiri55@gmail.com</a></p>
+                <p>🔗 <a href="https://github.com/pkunakachiri2001">GitHub</a> | <a href="https://linkedin.com/in/pkunaka1engineer">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026, KUNAKA TECH. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script src="mobile-optimize.js"></script>
+    <script src="seo-optimizer.js"></script>
+    <script src="professional-design.js"></script>
+</body>
+</html>
